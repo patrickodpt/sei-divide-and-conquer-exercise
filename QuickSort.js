@@ -3,7 +3,7 @@ function quickSort(arr, start = 0, end = arr.length - 1){
 
   function partition(arr) {
     // console.log(`entered partition`)
-    console.log(`array to be partitioned: ${arr}`)
+    // console.log(`array to be partitioned: ${arr}`)
     let pivot = arr[end];
     // console.log(`${pivot}`);
     for (let i = start; i < end; i++) {
@@ -14,15 +14,14 @@ function quickSort(arr, start = 0, end = arr.length - 1){
         partitionIndex++
       }
     }
+    
     let temp = arr[end] //put pivot in to temp
     arr[end] = arr[partitionIndex] //put current location of partitionIndex to pivot locale
     arr[partitionIndex] = temp // put pivot to current partitionIndex
-    console.log(`partitioned ARRAY: ${arr}`)
     return partitionIndex
   }
 
   if (start < end){
-    console.log(" IF RAN");
     partition(arr)
     quickSort(arr, start, partitionIndex - 1)
     quickSort(arr, partitionIndex + 1, end)
@@ -31,8 +30,6 @@ function quickSort(arr, start = 0, end = arr.length - 1){
 }
 // ABOVE FEELS MEH BUT CURRENTLY WORKS! //
 // PROPS TO mycodeschool FOR THE PARTIAL WALK THROUGH//
-
-
 
   // console.log(`initial array is: ${arr}`)
   // console.log(`arr[0] IS: ${arr[0]}`);

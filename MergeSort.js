@@ -38,11 +38,10 @@ function mergeSort(arr) {
   // }
 }
 
-
 // HELPER FUNCTION: merge two sorted arrays
 function merge(arr1, arr2) {
   // console.log(`I'M TRYING TO MERGE ${arr1} and ${arr2}`);
-  var result = [];
+  let result = [];
 
   while (arr1.length && arr2.length) {
     if(arr1[0] <= arr2[0]) {
